@@ -1,0 +1,17 @@
+# Explanation of the above code:
+
+1. It creates a list of all the attributes that each player has, and the list is named "attributes". The list will populated from the website later on. 
+
+2. In order to be able to download the players' data, we need to get all the links for all the players that we want to download the information for. An empty list called "links" is created, which will later be populated with the players' links.
+
+3. Next, we need to visit all the pages that contain the data for our players. We define the needed offset range that include the number of players we are interested in; here we want 640 players so our offset range goes from 0 to 560 in increments of 80 (0, 80, 160, ..., 560). The command "requests.get" is used to get the information from the basic website, plus all the other needed pages as described in the offset values. Therefore, the first page corresponds to offset 0, the second page corresponds to offset 80 and so on.
+
+4. Now, BeautifulSoap is utilized to parse the HTML files so we can extract the players' information from them. We loop through all the players' information and get all the 'href' attributes and add them to the "http://sofifa.com' address, thus obtaining the links for all the players and saving them in our 'links' list; only information for players previously included in the 'links' list (obtained through the first for loop) will be saved.
+
+5. Regular expression is used to set the pattern as the players' names, then our initial 'attributes' list will be populated.
+
+6. The "re.compile" command is used to parse the miltiline text.
+
+7. The last loop in the code focuses on obtaining the information and text needed for the attributes of each player. Again, here as in the previous steps, we decode the contents of the web pages, parse the html files and obtain the text from them.
+
+8. At the end, we create a data frame containing the link, name and all the attributes for each of the players. All the data scraped from the website is saved to a CSV file
