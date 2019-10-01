@@ -1,4 +1,4 @@
-# Explanation of the above code:
+#Explanation of the above code:
 
 1. It creates a list of all the attributes that each player has, and the list is named "attributes". The list will populated from the website later on. 
 
