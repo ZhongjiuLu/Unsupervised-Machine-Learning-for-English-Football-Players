@@ -1,2 +1,3 @@
-# Unsupervised-Machine-Learning-for-English-Football-Players
-Web scrap football players data from http://sofifa.com/, and apply unsupervised ML to cluster the players
+# Unsupervised Machine Learning from web scraped first 480 English players
+
+Data from http://sofifa.com/, and apply unsupervised ML to cluster the players
